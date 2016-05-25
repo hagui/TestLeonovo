@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         DevicePolicyManager mDPM = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
         ComponentName mAdminName = new ComponentName(MainActivity.this, DeviceAdminSample.class);
 
+        //TODO for your test
+        //TODO  disable this part because (mode == AppOpsManager.MODE_ALLOWED) is false all the time and check radioButton in setting manually
+        // TODO start Service TopApplicationService.class
+        // TODO check the log: with the permission : you can check the name of forground Application but not with your tablette
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             try {
                 PackageManager packageManager = getApplicationContext().getPackageManager();
